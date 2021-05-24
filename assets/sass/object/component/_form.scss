@@ -1,0 +1,59 @@
+.c-form{
+  padding:30px 15px;
+  @include min-screen($bp_tb_v){
+    padding:60px 15px;
+  }
+  @include min-screen($bp_base){
+  }
+
+  &__inner{
+    padding:30px 15px;
+    background: #fff;
+    @include min-screen($bp_tb_v){
+      max-width: 640px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 60px;
+    }
+    @include min-screen($bp_base){
+    }
+  }
+
+  &__item{
+    @include min-screen($bp_tb_v){
+    }
+    @include min-screen($bp_base){
+    }
+
+    input[type="text"]{
+      width: 100%;
+      height: 54px;
+      padding: 15px;
+      font-size: 16px;
+      background: #fff;
+      border: 1px solid $gray;
+
+      &:focus{
+        border-color: #000;
+      }
+    }
+
+    + .c-form__item{
+      margin-top: 30px;
+      @include min-screen($bp_tb_v){
+        margin-top: 45px;
+      }
+      @include min-screen($bp_base){
+      }
+    }
+  }
+
+  &__label{
+    display: inline-block;
+    margin-bottom: 9px;
+    @include min-screen($bp_tb_v){
+    }
+    @include min-screen($bp_base){
+    }
+  }
+}

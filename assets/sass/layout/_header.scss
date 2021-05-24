@@ -1,0 +1,29 @@
+.l-header {
+  color:#fff;
+  background: #000;
+  @include min-screen($bp_tb_v){
+  }
+
+  @include min-screen($bp_base){
+  }
+
+  &__inner{
+    padding:15px 0;
+    @include min-screen($bp_tb_v){
+    }
+
+    @include min-screen($bp_base){
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-size: 15px;
+    @include min-screen($bp_tb_v){
+    }
+
+    @include min-screen($bp_base){
+    }
+  }
+}
+

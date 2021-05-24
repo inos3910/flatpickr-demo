@@ -1,0 +1,8 @@
+.l-main{
+  flex-grow: 1;
+  background: $lgray;
+  @include min-screen($bp_tb_v){
+  }
+  @include min-screen($bp_base){
+  }
+}

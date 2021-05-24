@@ -1,0 +1,9 @@
+.l-cover {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  @include min-screen($bp_tb_v){
+  }
+  @include min-screen($bp_base){
+  }
+}
