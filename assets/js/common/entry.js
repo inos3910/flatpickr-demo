@@ -28,9 +28,7 @@ class Main {
   }
 
   async flatpickrInit() {
-    flatpickr.l10ns.ja.firstDayOfWeek = 0;
-
-    //最小は明日
+    //最小は翌日
     const minDate = new Date();
     this.minDate = minDate.setDate(minDate.getDate() + 1);
     //最大は3ヶ月
@@ -86,9 +84,9 @@ class Main {
     });
   }
 
-  //任意の日時を非表示
+  //特定の期間を選択不可にする
   addDatePicker4() {
-    //明日
+    //翌日
     const tommorow = new Date();
     tommorow.setDate(tommorow.getDate() + 1);
 
