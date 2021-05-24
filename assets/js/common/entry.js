@@ -155,7 +155,6 @@ class Main {
     this.datepicker5 = flatpickr('#js-datepicker-7', {
       locale        : Japanese,
       dateFormat    : 'Y.m.d（D）H:i',
-      //disableMobile : true,
       minDate       : this.minDate,
       maxDate       : this.maxDate,
       enableTime    : true,
