@@ -2,11 +2,6 @@ html {
   min-height: 100vh;
   touch-action: manipulation;
   text-rendering: optimizeSpeed;
-
-  &.is-menu-active{
-    overflow: hidden;
-    touch-action: none;
-  }
 }
 
 body {
@@ -52,9 +47,6 @@ a {
       pointer-events: none;
       cursor:default;
     }
-  }
-  img {
-    transition: $transition;
   }
 }
 
@@ -102,37 +94,4 @@ textarea{
 
 select::-ms-expand{
   display: none;
-}
-
-img {
-  user-select: none;
-  max-width: 100%;
-  height: auto;
-  backface-visibility: hidden;
-}
-
-picture {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-svg {
-  overflow: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform-box: fill-box;
-  path,
-  rect,
-  circle,
-  polygon {
-    transform-box: fill-box;
-    transform-origin: 50% 50%;
-    backface-visibility: hidden;
-  }
-
 }
