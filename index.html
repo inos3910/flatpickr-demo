@@ -20,7 +20,7 @@
     </header>
     <!-- /.l-header -->
     <main class="l-main">
-      <div class="c-form">
+      <form class="c-form">
         <div class="c-form__inner">
           <div class="c-form__item">
             <label class="c-form__label" for="js-datepicker-0">デフォルト</label>
@@ -58,13 +58,44 @@
           </div>
           <!-- /.c-form__item -->
           <div class="c-form__item">
-            <label class="c-form__label" for="js-datepicker-7">カレンダー + 時間<br>特定の日付の場合に時間の範囲を変更（明日、2日後、3日後）</label>
+            <label class="c-form__label" for="js-datepicker-7">カレンダー + 時間<br>特定の日付の場合に時間の範囲を変更<br>デフォルト09:00〜18:00<br>翌日・2日後・3日後10::00〜20:00<br>日曜13:00〜20:00</label>
             <input type="text" name="datepicker-7" id="js-datepicker-7">
+          </div>
+          <!-- /.c-form__item -->
+          <div class="c-form__item">
+            <label class="c-form__label" for="js-datepicker-8">カレンダー + 時間②（時間別枠）input="time"を使う場合<br>特定の日付の場合に時間の範囲を変更<br>デフォルト09:00〜18:00<br>翌日・2日後・3日後10::00〜20:00<br>日曜13:00〜20:00</label>
+            <div class="c-form__row">
+              <div class="c-form__row-item">
+                <input type="text" name="datepicker-8" id="js-datepicker-8">
+              </div>
+              <!-- /.c-form__row-item -->
+              <div class="c-form__row-item">
+                <input type="time" min="09:00" max="18:00" required id="js-time-8">
+              </div>
+              <!-- /.c-form__row-item -->
+            </div>
+            <!-- /.c-form__row -->
+            <input class="c-form__submit" type="submit" value="Submit（押すとmin、maxが適用される）">
+          </div>
+          <!-- /.c-form__item -->
+          <div class="c-form__item">
+            <label class="c-form__label" for="js-datepicker-9">カレンダー + 時間③（時間別枠）selectboxを使う場合<br>特定の日付の場合に時間の範囲を変更<br>デフォルト09:00〜18:00<br>翌日・2日後・3日後10::00〜20:00<br>日曜13:00〜20:00</label>
+            <div class="c-form__row">
+              <div class="c-form__row-item">
+                <input type="text" name="datepicker-9" id="js-datepicker-9">
+              </div>
+              <!-- /.c-form__row-item -->
+              <div class="c-form__row-item">
+                <select id="js-time-9"></select>
+              </div>
+              <!-- /.c-form__row-item -->
+            </div>
+            <!-- /.c-form__row -->
           </div>
           <!-- /.c-form__item -->
         </div>
         <!-- /.c-form__inner -->
-      </div>
+      </form>
       <!-- /.c-form -->
     </main>
     <!-- /.l-main -->
