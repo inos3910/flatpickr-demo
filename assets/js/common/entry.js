@@ -76,8 +76,9 @@ class Main {
   //日本語表示
   addDatePicker1() {
     this.datepicker1 = flatpickr('#js-datepicker-1', {
-      locale            : Japanese,
-      dateFormat        : 'Y.m.d（D）'
+      locale      : Japanese,
+      dateFormat  : 'Y.m.d（D）',
+      defaultDate : new Date()
     });
   }
 
