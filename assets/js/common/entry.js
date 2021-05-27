@@ -195,7 +195,6 @@ class Main {
           return;
         }
 
-        let dates = [];
         //明日
         const tommorow = new Date();
         tommorow.setDate(tommorow.getDate() + 1);
@@ -208,11 +207,10 @@ class Main {
         const threeDaysLater = new Date();
         threeDaysLater.setDate(threeDaysLater.getDate() + 3);
 
-        dates = [
+        const dates = [
         this.formatDate(tommorow),
         this.formatDate(twoDaysLater),
-        this.formatDate(threeDaysLater),
-        ...dates
+        this.formatDate(threeDaysLater)
         ];
 
         const selectDate = this.formatDate(selectedDates[0]);
@@ -331,7 +329,6 @@ class Main {
       return;
     }
 
-    let dates = [];
     //明日
     const tommorow = new Date();
     tommorow.setDate(tommorow.getDate() + 1);
@@ -344,11 +341,10 @@ class Main {
     const threeDaysLater = new Date();
     threeDaysLater.setDate(threeDaysLater.getDate() + 3);
 
-    dates = [
+    const dates = [
     this.formatDate(tommorow),
     this.formatDate(twoDaysLater),
-    this.formatDate(threeDaysLater),
-    ...dates
+    this.formatDate(threeDaysLater)
     ];
 
     const selectDay = this.formatDate(selectedDate);
@@ -378,7 +374,6 @@ class Main {
       return;
     }
 
-    let dates = [];
     //明日
     const tommorow = new Date();
     tommorow.setDate(tommorow.getDate() + 1);
@@ -391,11 +386,10 @@ class Main {
     const threeDaysLater = new Date();
     threeDaysLater.setDate(threeDaysLater.getDate() + 3);
 
-    dates = [
+    const dates = [
     this.formatDate(tommorow),
     this.formatDate(twoDaysLater),
-    this.formatDate(threeDaysLater),
-    ...dates
+    this.formatDate(threeDaysLater)
     ];
 
     $time.innerHTML = '';
