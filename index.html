@@ -23,45 +23,44 @@
     <main class="l-main">
       <form class="c-form">
         <div class="c-form__inner">
-          <div class="c-form__item">
+          <div class="c-form__item" id="default">
             <label class="c-form__label" for="js-datepicker-0">デフォルト</label>
             <input type="text" name="datepicker-0" id="js-datepicker-0">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="ja">
             <label class="c-form__label" for="js-datepicker-1">日本語表示</label>
             <input type="text" name="datepicker-1" id="js-datepicker-1">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="limit">
             <label class="c-form__label" for="js-datepicker-2">期間制限（翌日〜3ヶ月後）</label>
             <input type="text" name="datepicker-2" id="js-datepicker-2">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="holiday">
             <label class="c-form__label" for="js-datepicker-3">祝日を反映（背景を赤にする）</label>
             <input type="text" name="datepicker-3" id="js-datepicker-3">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="unselectable">
             <label class="c-form__label" for="js-datepicker-4">特定の期間を選択不可にする<br>（翌日、5日後~10日後、水曜日）</label>
             <input type="text" name="datepicker-4" id="js-datepicker-4">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="calendar-and-time">
             <label class="c-form__label" for="js-datepicker-5">カレンダーと時間を同時に表示</label>
             <input type="text" name="datepicker-5" id="js-datepicker-5">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
+          <div class="c-form__item" id="time">
             <label class="c-form__label" for="js-datepicker-6">時間のみ</label>
             <input type="text" name="datepicker-6" id="js-datepicker-6">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
-            <label class="c-form__label" for="js-datepicker-7">カレンダー + 時間①<br>
+          <div class="c-form__item" id="change-time-by-date-1">
+            <label class="c-form__label" for="js-datepicker-7">日付によって時間範囲を変更①<br>
               <span class="c-form__notes">
-                特定の日付の場合に時間の範囲を変更<br>
                 デフォルト 9:00〜18:00<br>
                 翌日・2日後・3日後 10:00〜20:00<br>
                 日曜 13:00〜20:00
@@ -70,10 +69,9 @@
             <input type="text" name="datepicker-7" id="js-datepicker-7">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
-            <label class="c-form__label" for="js-datepicker-8">カレンダー + 時間②<br>時間選択にinput type="time"を使うパターン
+          <div class="c-form__item" id="change-time-by-date-2">
+            <label class="c-form__label" for="js-datepicker-8">日付によって時間範囲を変更②<br>時間選択にinput type="time"を使うパターン
               <span class="c-form__notes">
-                特定の日付の場合に時間の範囲を変更<br>
                 デフォルト 9:00〜18:00<br>
                 翌日・2日後・3日後 10:00〜20:00<br>
                 日曜 13:00〜20:00
@@ -93,10 +91,9 @@
             <input class="c-form__submit" type="submit" value="Submit（押すとmin、maxが検証される）">
           </div>
           <!-- /.c-form__item -->
-          <div class="c-form__item">
-            <label class="c-form__label" for="js-datepicker-9">カレンダー + 時間③<br>時間選択にセレクトボックスを使うパターン
+          <div class="c-form__item" id="change-time-by-date-3">
+            <label class="c-form__label" for="js-datepicker-9">日付によって時間範囲を変更③<br>時間選択にセレクトボックスを使うパターン
               <span class="c-form__notes">
-                特定の日付の場合に時間の範囲を変更<br>
                 デフォルト 9:00〜18:00<br>
                 翌日・2日後・3日後 10:00〜20:00<br>
                 日曜 13:00〜20:00

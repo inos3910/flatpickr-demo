@@ -7,7 +7,7 @@
   }
 
   &__inner{
-    padding:30px 15px 90px;
+    padding:60px 15px 90px;
     background: #fff;
     @include min-screen($bp_tb_v){
       max-width: 640px;
@@ -48,9 +48,10 @@
     }
 
     + .c-form__item{
-      margin-top: 30px;
+      padding-top: 60px;
+      margin-top: 60px;
+      border-top: 1px dotted $gray;
       @include min-screen($bp_tb_v){
-        margin-top: 45px;
       }
       @include min-screen($bp_base){
       }
