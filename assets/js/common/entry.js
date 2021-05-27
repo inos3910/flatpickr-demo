@@ -12,16 +12,16 @@ class Main {
   fetchHolidays() {
     const today = new Date();
     const year  = today.getFullYear();
-    return fetch(`https://holidays-jp.github.io/api/v1/${year}/date.json`)
+    const url   = `https://holidays-jp.github.io/api/v1/${year}/date.json`;
+    return fetch(url)
     .then((res) => {
       if (!res.ok) {
         throw new Error(`${res.status} ${res.statusText}`);
       }
+
       return res.json();
     })
-    .then((json) => {
-      return json;
-    })
+    .then((json) => json)
     .catch((reason) => {
       console.error(reason);
     });
@@ -29,11 +29,11 @@ class Main {
 
   //日付をフォーマット YYYY-MM-DD
   formatDate(date) {
-    const year      = date.getFullYear();
-    const month     = date.getMonth() + 1;
-    const mm        = ('00' + month).slice(-2);
-    const day       = date.getDate();
-    const dd        = ('00' + day).slice(-2);
+    const year  = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const mm    = ('00' + month).slice(-2);
+    const day   = date.getDate();
+    const dd    = ('00' + day).slice(-2);
     return `${year}-${mm}-${dd}`;
   }
 
@@ -47,25 +47,19 @@ class Main {
   }
 
   async flatpickrInit() {
+    //期間制限用の値
     //最小は翌日
     const minDate = new Date();
     this.minDate = minDate.setDate(minDate.getDate() + 1);
     //最大は3ヶ月
     const maxDate = new Date();
     this.maxDate = maxDate.setMonth(maxDate.getMonth() + 3);
-
+    //祝日を取得
     this.holidays = await this.fetchHolidays();
-
-    this.addDatePicker0();
-    this.addDatePicker1();
-    this.addDatePicker2();
-    this.addDatePicker3();
-    this.addDatePicker4();
-    this.addDatePicker5();
-    this.addDatePicker6();
-    this.addDatePicker7();
-    this.addDatePicker8();
-    this.addDatePicker9();
+    //関数を実行
+    for (let i = 0; i <= 9; ++i) {
+      this[`addDatePicker${i}`]();
+    }
   }
 
   //デフォルト
@@ -258,7 +252,7 @@ class Main {
         this.timeChangeByDate(selectedDates[0])
       },
       onReady       : (selectedDates, dateStr, instance) => {
-        this.timeChangeByDate(this.minDate)
+        this.timeChangeByDate(selectedDates[0])
       }
     });
   }
