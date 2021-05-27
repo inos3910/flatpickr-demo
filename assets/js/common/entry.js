@@ -123,7 +123,6 @@ class Main {
       minDate     : this.minDate,
       maxDate     : this.maxDate,
       onDayCreate : (dObj, dStr, fp, dayElem) => {
-        //祝日はclassをつける
         this.addHolidayClass(dayElem);
       },
       disable     : [
@@ -152,7 +151,6 @@ class Main {
       minTime     : '09:00',
       maxTime     : '18:00',
       onDayCreate : (dObj, dStr, fp, dayElem) => {
-        //祝日はclassをつける
         this.addHolidayClass(dayElem);
       },
     });
@@ -181,7 +179,6 @@ class Main {
       minTime       : '09:00',
       maxTime       : '18:00',
       onDayCreate   : (dObj, dStr, fp, dayElem) => {
-        //祝日はclassをつける
         this.addHolidayClass(dayElem);
       },
       onChange      : (selectedDates, dateStr, instance) => {
@@ -236,24 +233,11 @@ class Main {
       minDate       : this.minDate,
       maxDate       : this.maxDate,
       onDayCreate   : (dObj, dStr, fp, dayElem) => {
-        //祝日はclassをつける
         this.addHolidayClass(dayElem);
       },
-      onChange      : (selectedDates, dateStr, instance) => {
-        if(!selectedDates[0]){
-          return;
-        }
-        this.timeChangeByDate(selectedDates[0]);
-      },
-      onClose       : (selectedDates, dateStr, instance) => {
-        if(!selectedDates[0]){
-          return;
-        }
-        this.timeChangeByDate(selectedDates[0])
-      },
-      onReady       : (selectedDates, dateStr, instance) => {
-        this.timeChangeByDate(selectedDates[0])
-      }
+      onChange      : (selectedDates, dateStr, instance) => this.timeChangeByDate(selectedDates[0]),
+      onClose       : (selectedDates, dateStr, instance) => this.timeChangeByDate(selectedDates[0]),
+      onReady       : (selectedDates, dateStr, instance) => this.timeChangeByDate(selectedDates[0])
     });
   }
 
@@ -266,24 +250,11 @@ class Main {
       minDate       : this.minDate,
       maxDate       : this.maxDate,
       onDayCreate   : (dObj, dStr, fp, dayElem) => {
-        //祝日はclassをつける
         this.addHolidayClass(dayElem);
       },
-      onChange      : (selectedDates, dateStr, instance) => {
-        if(!selectedDates[0]){
-          return;
-        }
-        this.selectTimeChangeByDate(selectedDates[0]);
-      },
-      onClose       : (selectedDates, dateStr, instance) => {
-        if(!selectedDates[0]){
-          return;
-        }
-        this.selectTimeChangeByDate(selectedDates[0])
-      },
-      onReady       : (selectedDates, dateStr, instance) => {
-        this.selectTimeChangeByDate(selectedDates[0])
-      }
+      onChange      : (selectedDates, dateStr, instance) => this.selectTimeChangeByDate(selectedDates[0]),
+      onClose       : (selectedDates, dateStr, instance) => this.selectTimeChangeByDate(selectedDates[0]),
+      onReady       : (selectedDates, dateStr, instance) => this.selectTimeChangeByDate(selectedDates[0])
     });
   }
 
@@ -318,6 +289,10 @@ class Main {
 
   //日付によって時間（input type=time）を変更する
   timeChangeByDate(selectedDate) {
+    if(!selectedDate){
+      return;
+    }
+
     const $time = document.querySelector('#js-time-8');
     if(!$time){
       return;
@@ -363,6 +338,10 @@ class Main {
 
   //日付によって時間（select）を変更する
   selectTimeChangeByDate(selectedDate) {
+    if(!selectedDate){
+      return;
+    }
+
     const $time = document.querySelector('#js-time-9');
     if(!$time){
       return;
